@@ -1,0 +1,51 @@
+/* 1. Box-sizing model para sa lahat ng elements */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Tanggalin ang default margin at padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Smooth scrolling at text adjustment sa mobile */
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+/* 4. Body layout at font smoothing */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 5. Media elements styling */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Form control font inheritance */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Text overflow handling */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Tanggalin ang default list dots/numbers (opsyonal) */
+ul, ol {
+  list-style: none;
+}
+
+/* 9. Siguraduhing full height ang React root container */
+#root {
+  isolation: isolate;
+  min-height: 100vh;
+}

@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Reset Margins & Padding */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent Page Scrolling */
+html, body {
+  background-color: #ffffff;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Main Page Container - Centered on Plain White Background */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Header Title Above Calculator */
+.CalcHeader {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222222;
+  text-align: center;
+}
+
+/* Calculator Body */
+.Calculator {
+  width: 100%;
+  max-width: 360px;
+  padding: 20px;
+  background-color: #d6caa9;
+  border: 3px solid #b5a888;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Display Screen */
+.CalcDisplay {
+  background-color: #121f15;
+  color: #33ff66;
+  height: 70px;
+  font-family: 'VT323', monospace;
+  font-size: 2.5rem;
+  padding: 10px 16px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden; /* Removes screen scrollbar */
+}
+
+/* 4-Column Grid for Buttons */
+.CalcButtons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+/* Base Styles for All Buttons */
+.CalcButton,
+.ClearButton,
+.OperatorButton,
+.DizonButton {
+  height: 52px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease, transform 0.05s ease;
+}
+
+/* Active Press Effect */
+.CalcButton:active,
+.ClearButton:active,
+.OperatorButton:active,
+.DizonButton:active {
+  transform: translateY(2px);
+}
+
+/* Standard Number Buttons */
+.CalcButton {
+  background-color: #ece3d0;
+  color: #2c2523;
+}
+
+.CalcButton:hover {
+  background-color: #f5ede0;
+}
+
+/* Clear Button (Red) */
+.ClearButton {
+  background-color: #c84b31;
+  color: #ffffff;
+}
+
+.ClearButton:hover {
+  background-color: #d9553b;
+}
+
+/* Operator Buttons (Amber) */
+.OperatorButton {
+  background-color: #d97724;
+  color: #ffffff;
+}
+
+.OperatorButton:hover {
+  background-color: #e58532;
+}
+
+/* Full-Width Dizon Button (Matching Standard Buttons) */
+.DizonButton {
+  grid-column: span 4;       /* Spans across all 4 grid columns */
+  margin-top: 10px;          /* Adds space above the button */
+  background-color: #ece3d0; /* Matches standard number buttons */
+  width: 100%;
+  color: #2c2523;            /* Matches standard button text color */
+  font-family: 'Courier New', Courier, monospace; /* Matches standard button font */
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.DizonButton:hover {
+  background-color: #f5ede0; /* Matches standard hover color */
+}
